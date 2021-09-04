@@ -10,7 +10,7 @@ On the basis of our findings, we then created the final model using RandomForest
 
 Calculations of Scores - <br />
 (Shown as per respective question numbers)<br />
-Language_vocab = (Ans.1 + Ans.2 + Ans.3 + Ans.4 + Ans.5 + Ans.6 + Ans.8)/24<br />
+Language_vocab = (Ans.1 + Ans.2 + Ans.3 + Ans.4 + Ans.5 + Ans.6 + Ans.8)/28<br />
 Memory = (Ans.2 + Ans.9)/8 <br />
 Speed = Calculated on the basis of time taken to complete the quiz <br />
 Visual_discrimination = (Ans.1 + Ans.3 + Ans.4 + Ans.6)/16 <br />
