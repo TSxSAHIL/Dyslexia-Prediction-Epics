@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About page</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        header {
+            height: 70px;
+            background-color: #73b7c9dd;
+            margin-top: 5px;
+            text-align: right;
+            position: static;
+        }
+
+        span {
+            background-color: #e9eef0;
+            font-weight: 100;
+            font-size: 30px;
+            opacity: 0.7;
+            padding: 10px;
+            transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+        }
+
+        #last {
+            margin-right: 0.2em;
+        }
+
+        span:hover {
+            background-color: #73b7c9dd;
+            border: 0px;
+        }
+
+        .parallax1 {
+            background-image: url("ai.jpeg");
+            min-height: 400px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parallax2 {
+            background-image: url("about2.jpeg");
+            min-height: 100px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .parallax3 {
+            background-image: url("ai.gif");
+            min-height: 110px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 7em;
+        }
+
+        .quote {
+            background-color: #73b7c9dd;
+            font-size: 20px;
+            font-weight: 100;
+            /*text-align: center;*/
+            padding: 2em;
+        }
+
+        #quote {
+            font-size: 40px;
+            font-weight: 20;
+            background-color: rgba(245, 245, 245, 0.5);
+            padding: 10px;
+        }
+
+        #quote2 {
+            font-size: 40px;
+            font-weight: 20;
+            background-color: #73b7c9ff;
+            padding: 10px;
+            text-align: center;
+            align-self: center;
+        }
+
+        .main {
+            background-color: #c5e0e8;
+            /*background-color: rgba(245, 245, 245);*/
+            font-size: 20px;
+            font-weight: 100;
+            padding: 2em;
+        }
+
+        h3 {
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        footer {
+            height: 55px;
+            background-color: #73b7c9dd;
+            font-size: 15px;
+            padding: 1em;
+            text-align: center;
+            position: static;
+            padding-bottom: 2em;
+        }
+
+        a:link {
+            color: black;
+            text-decoration-line: none;
+        }
+
+        a:visited {
+            color: black;
+            text-decoration-line: none;
+        }
+
+        a:hover {
+            color: #2d2d2e;
+            text-decoration-line: none;
+        }
+
+        a:active {
+            color: black;
+            text-decoration-line: none;
+        }
+
+        #select {
+            font-weight: 800;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <br>
+        <span><a href="home.html">Home</a></span>
+        <span id="select"><a href="about.html">About</a></span>
+        <span><a href="survey.html">Survey</a></span>
+        <span id="last"><a href="quiz.html">Quiz</a></span>
+    </header>
+
+    <div class="parallax1"></div>
+    <section id="1">
+    <div class="quote">
+        <b id="quote">Introduction to Dataset</b><br><br>
+        In this project, we are making predictions using Machine Learning, on the basis of quiz scores of a person to
+        see whether they have Dyslexia. In our dataset, we have the columns 'Language_vocab', 'Memory', 'Speed',
+        'Visual_discrimination', 'Audio_Discrimination', 'Survey_Score' and 'Label'. Every applicant is required to take
+        a quiz which has different questions to test language vocabulary, memory, speed, visual discrimination and audio
+        discrimination. On the basis of their answers of these questions, points for each section are calculated and put
+        into the first five columns of the dataset, respectively. Another survey is also conducted on the basis of which
+        'Survey_Score' is calculated. These scores are analysed to get the value of 'Label', which ranges from 0 to 2.
+        The values 0, 1 and 2 mean that the chances of the applicant having dyslexia are low, moderate and high,
+        respectively.
+        <br>
+        <br>
+        <img src="features.png" width=800>
+    </div>
+    </section>
+    <!--<div class="parallax2"></div>-->
+    <section id="2">
+        <div class="main">
+            <b id="quote2">Calculation of scores</b><br><br>
+            <img src="score.png" width=800>
+        </div>
+    </section>
+    <section id="3">
+        <div class="quote">
+            <b id="quote">Working of the Model</b><br><br>
+            The purpose of this project is to predict the 'Label' i.e., chances of the applicant having dyslexia. if the
+            values of 'Language_vocab', 'Memory', 'Speed', 'Visual_discrimination', 'Audio_Discrimination' and
+            'Survey_Score' are provided. In the file 'DyslexiaML', we have created five different models to find the one
+            which is the best fit for the given dataset. The comparison has been made between DecisionTree, RandomForest,
+            SVM, RandomForest with GridSearch and SVM with GridSearch, on the basis of error, precision and recall. On
+            comparing all of these parameters, we found that RandomForest with GridSearch is the best fit for our dataset.
+            <br>
+            <br>
+            <img src="graph.png" width=800>
+            <br><br>
+            <img src="error.png" width=200>
+            <br>
+            <br>
+            On the basis of our findings, we then created the final model using RandomForestClassifier with GridSearchCV in
+            order to make the most accurate predictions, in 'DyslexiaML_final' file. This model was then tested on a new
+            dataset to find the labels, which were then compared with the actual label values. After this check we found out
+            that our model was able to make predictions for dyslexia with a 5.8% error rate.
+            <br>
+            <br>
+            <img src="cm.jpeg" width=800>
+    </div>
+    </section>
+    <div class="parallax3">
+        <div id="quote2">
+        <a href="https://github.com/Manvi-Kaur/HackathonML">
+        Link to our GitHub Repository
+        </a>
+    </div>
+    </div>
+    <footer>
+        2021 WEBpredictor<br>
+        All rights reserved<br>
+        Issued in public interest<br>
+        WEBpredictor does not provide any medical advice, diagnosis or treatment.<br><br>
+    </footer>
+
+</body>
+
+</html>

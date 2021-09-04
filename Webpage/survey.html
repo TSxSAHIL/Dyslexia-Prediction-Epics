@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>survey page</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        header {
+            height: 70px;
+            background-color: #73b7c9dd;
+            margin-top: 5px;
+            text-align: right;
+            position: static;
+        }
+
+        span {
+            background-color: #e9eef0;
+            font-weight: 100;
+            font-size: 30px;
+            opacity: 0.7;
+            padding: 10px;
+            transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+        }
+
+        #last {
+            margin-right: 0.2em;
+        }
+
+        span:hover {
+            background-color: #73b7c9dd;
+            border: 0px;
+        }
+
+        .parallax1 {
+            background-image: url("survey.jpeg");
+            min-height: 200px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 5em;
+        }
+
+        .main {
+            background-color: #73b7c9dd;
+            padding: 10px;
+        }
+
+        .question {
+            background-color: #e9eef0;
+            font-size: 25px;
+            font-weight: 400;
+            padding: 2em;
+        }
+
+        #question {
+            background-color: #73b7c9ff;
+            font-size: 30px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #warning {
+            background-color: #e9eef0;
+            font-size: 30px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #button {
+            background-color: #73b7c9aa;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .footer {
+            height: 55px;
+            background-color: #73b7c9dd;
+            padding: 1em;
+            font-size: 15px;
+            text-align: center;
+            position: static;
+            padding-bottom: 2em;
+        }
+
+        a:link {
+            color: black;
+            text-decoration-line: none;
+        }
+
+        a:visited {
+            color: black;
+            text-decoration-line: none;
+        }
+
+        a:hover {
+            color: #2d2d2e;
+            text-decoration-line: none;
+        }
+
+        a:active {
+            color: black;
+            text-decoration-line: none;
+        }
+
+        #select {
+            font-weight: 800;
+            border: 2px solid black;
+        }
+
+        .content {
+            background-color: #73b7c955;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <br>
+        <span><a href="home.html">Home</a></span>
+        <span><a href="about.html">About</a></span>
+        <span id="select"><a href="survey.html">Survey</a></span>
+        <span id="last"><a href="quiz.html">Quiz</a></span>
+    </header>
+    <div class="parallax1">
+        <div id="warning">
+            <centre> This survey is specially designed for parents and teachers to test if their child/student is
+                dyslexic or not. This survey is based on your keen observation towards your child/student.
+            </centre>
+        </div>
+    </div>
+    <div class="main">
+        <form name="survey" method="post" action="survey.php">
+            <div class="question">
+
+                <span id="question">
+                    Question 1
+                </span><br><br>
+                <div class="content">
+                    Did your child struggle to learn to count?<br>
+                    <input type="radio" id="Yes-frequently" name="q1" value="0" disabled>
+                    <label for="Yes-frequently">Yes-frequently</label><br>
+                    <input type="radio" id="Sometimes" name="q1" value="2" disabled>
+                    <label for="Sometimes">Sometimes</label><br>
+                    <input type="radio" id="No-never" name="q1" value="4" disabled>
+                    <label for="No-never">No-never</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 2
+                </span><br><br>
+                <div class="content">
+                    Does he/she say numbers out of order, long after peers have mastered this skill?<br>
+                    <input type="radio" id="Yes-frequently" name="q2" value="0" disabled>
+                    <label for="Yes-frequently">Yes-frequently</label><br>
+                    <input type="radio" id="Sometimes" name="q2" value="2" disabled>
+                    <label for="Sometimes">Sometimes</label><br>
+                    <input type="radio" id="No-never" name="q2" value="4" disabled>
+                    <label for="No-never">No-never</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 3
+                </span><br><br>
+                <div class="content">
+                    Does your child not seem to understand the connection between the symbol "4" and the word "four"?
+                    Does he
+                    make mistakes when reading or following directions involving numbers, words and symbols?<br>
+                    <input type="radio" id="Yes-frequently" name="q3" value="0" disabled>
+                    <label for="Yes-frequently">Yes-frequently</label><br>
+                    <input type="radio" id="Sometimes" name="q3" value="2" disabled>
+                    <label for="Sometimes">Sometimes</label><br>
+                    <input type="radio" id="No-never" name="q3" value="4" disabled>
+                    <label for="No-never">No-never</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 4
+                </span><br><br>
+                <div class="content">
+                    Does your child struggle to connect the concept of numbers to real-world items? When you ask him how
+                    many
+                    cookies are left, for example, does he seem confused by the question or answer incorrectly?<br>
+                    <input type="radio" id="Yes-frequently" name="q4" value="0" disabled>
+                    <label for="Yes-frequently">Yes-frequently</label><br>
+                    <input type="radio" id="Sometimes" name="q4" value="2" disabled>
+                    <label for="Sometimes">Sometimes</label><br>
+                    <input type="radio" id="No-never" name="q4" value="4" disabled>
+                    <label for="No-never">No-never</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 5
+                </span><br><br>
+                <div class="content">
+                    Does your child not seem to understand the difference between adding and subtracting? Does she
+                    confuse the +
+                    and - symbols when completing math problems?<br>
+                    <input type="radio" id="Yes-frequently" name="q5" value="0" disabled>
+                    <label for="Yes-frequently">Yes-frequently</label><br>
+                    <input type="radio" id="Sometimes" name="q5" value="2" disabled>
+                    <label for="Sometimes">Sometimes</label><br>
+                    <input type="radio" id="No-never" name="q5" value="4" disabled>
+                    <label for="No-never">No-never</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 6
+                </span><br><br>
+                <div class="content">
+                    Does your child still count on his fingers past third grade?<br>
+                    <input type="radio" id="Yes-frequently" name="q6" value="0" disabled>
+                    <label for="Yes-frequently">Yes-frequently</label><br>
+                    <input type="radio" id="Sometimes" name="q6" value="2" disabled>
+                    <label for="Sometimes">Sometimes</label><br>
+                    <input type="radio" id="No-never" name="q6" value="4" disabled>
+                    <label for="No-never">No-never</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 7
+                </span><br><br>
+                <div class="content">
+                    Difficulty sustaining attention; seems "hyper" or "daydreamer"?<br>
+                    <input type="radio" id="Yes" name="q7" value="0" disabled>
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="q7" value="4" disabled>
+                    <label for="No">No</label><br>
+                    <input type="radio" id="Unknown" name="q7" value="2" disabled>
+                    <label for="Unknown">Unknown</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 8
+                </span><br><br>
+                <div class="content">
+                    Confused by letters, numbers, words, sequences, or verbal explanations?<br>
+                    <input type="radio" id="Yes" name="q8" value="0" disabled>
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="q8" value="4" disabled>
+                    <label for="No">No</label><br>
+                    <input type="radio" id="Unknown" name="q8" value="2" disabled>
+                    <label for="Unknown">Unknown</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 9
+                </span><br><br>
+                <div class="content">
+                    Reads and rereads with little comprehension?<br>
+                    <input type="radio" id="Yes" name="q9" value="0" disabled>
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="q9" value="4" disabled>
+                    <label for="No">No</label><br>
+                    <input type="radio" id="Unknown" name="q9" value="2" disabled>
+                    <label for="Unknown">Unknown</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 10
+                </span><br><br>
+                <div class="content">
+                    Difficulty putting thoughts into words; speaks in halting phrases; leaves sentences incomplete?<br>
+                    <input type="radio" id="Yes" name="q10" value="0" disabled>
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="q10" value="4" disabled>
+                    <label for="No">No</label><br>
+                    <input type="radio" id="Unknown" name="q10" value="2" disabled>
+                    <label for="Unknown">Unknown</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 11
+                </span><br><br>
+                <div class="content">
+                    Can count, but has difficulty counting objects and dealing with money?<br>
+                    <input type="radio" id="Yes" name="q11" value="0" disabled>
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="q11" value="4" disabled>
+                    <label for="No">No</label><br>
+                    <input type="radio" id="Unknown" name="q11" value="2" disabled>
+                    <label for="Unknown">Unknown</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 12
+                </span><br><br>
+                <div class="content">
+                    Does your child worry for sequences, facts and information that were not taught before?<br>
+                    <input type="radio" id="Yes" name="q12" value="0" disabled>
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="q12" value="4" disabled>
+                    <label for="No">No</label><br>
+                    <input type="radio" id="Unknown" name="q12" value="2" disabled>
+                    <label for="Unknown">Unknown</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 13
+                </span><br><br>
+                <div class="content">
+                    Does your child omplain of dizziness, headaches or stomach aches while reading?<br>
+                    <input type="radio" id="Yes" name="q13" value="0" disabled>
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="q13" value="4" disabled>
+                    <label for="No">No</label><br>
+                    <input type="radio" id="Unknown" name="q13" value="2" disabled>
+                    <label for="Unknown">Unknown</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 14
+                </span><br><br>
+                <div class="content">
+                    Is reading extremely difficult for your child? (Below grade or age level)<br>
+                    <input type="radio" id="Yes" name="q14" value="0" disabled>
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="q14" value="4" disabled>
+                    <label for="No">No</label><br>
+                    <input type="radio" id="Unknown" name="q14" value="2" disabled>
+                    <label for="Unknown">Unknown</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 15
+                </span><br><br>
+                <div class="content">
+                    Is his spelling ability poor? Letters missed, reversed etc?<br>
+                    <input type="radio" id="Yes" name="q15" value="0" disabled>
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="q15" value="4" disabled>
+                    <label for="No">No</label><br>
+                    <input type="radio" id="Unknown" name="q15" value="2" disabled>
+                    <label for="Unknown">Unknown</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 16
+                </span><br><br>
+                <div class="content">
+                    Is it difficult for him to rhyme words?(If you are not sure, play a rhyming game with your child or
+                    student)<br>
+                    <input type="radio" id="Yes" name="q16" value="0" disabled>
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="q16" value="4" disabled>
+                    <label for="No">No</label><br>
+                    <input type="radio" id="Unknown" name="q16" value="2" disabled>
+                    <label for="Unknown">Unknown</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 17
+                </span><br><br>
+                <div class="content">
+                    Is there difficulty telling time on a clock with hands and/or tying shoes with laces?<br>
+                    <input type="radio" id="Yes" name="q17" value="0" disabled>
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="q17" value="4" disabled>
+                    <label for="No">No</label><br>
+                    <input type="radio" id="Unknown" name="q17" value="2" disabled>
+                    <label for="Unknown">Unknown</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 18
+                </span><br><br>
+                <div class="content">
+                    "Is there difficulty finding the right words while speaking? Lots of ums, ahs, 'those things', and
+                    'that
+                    stuff'?<br>
+                    <input type="radio" id="Yes" name="q18" value="0" disabled>
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="q18" value="4" disabled>
+                    <label for="No">No</label><br>
+                    <input type="radio" id="Unknown" name="q18" value="2" disabled>
+                    <label for="Unknown">Unknown</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 19
+                </span><br><br>
+                <div class="content">
+                    Pauses, repeats or frequent mistakes when reading aloud?<br>
+                    <input type="radio" id="Yes" name="q19" value="0" disabled>
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="q19" value="4" disabled>
+                    <label for="No">No</label><br>
+                    <input type="radio" id="Unknown" name="q19" value="2" disabled>
+                    <label for="Unknown">Unknown</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 20
+                </span><br><br>
+                <div class="content">
+                    Unusually high or low tolerance for pain?<br>
+                    <input type="radio" id="Yes" name="q20" value="0" disabled>
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="q20" value="4" disabled>
+                    <label for="No">No</label><br>
+                    <input type="radio" id="Unknown" name="q20" value="2" disabled>
+                    <label for="Unknown">Unknown</label><br>
+                </div>
+                <!--<span id="button"><a href="result.html"><centre>SUBMIT THE SURVEY!</centre></a></span>-->
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        2021 WEBpredictor<br>
+        All rights reserved<br>
+        Issued in public interest<br>
+        WEBpredictor does not provide any medical advice, diagnosis or treatment.<br>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>quiz page</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        header {
+            height: 70px;
+            background-color: #73b7c9dd;
+            margin-top: 5px;
+            text-align: right;
+            position: static;
+        }
+
+        span {
+            background-color: #e9eef0;
+            font-weight: 100;
+            font-size: 30px;
+
+            opacity: 0.7;
+            padding: 10px;
+            transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+        }
+
+        span:hover {
+            background-color: #73b7c9dd;
+            border: 0px;
+        }
+
+        .parallax1 {
+            background-image: url("quiz.jpeg");
+            min-height: 200px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 5em;
+        }
+
+        .main {
+            background-color: #73b7c9dd;
+            padding: 10px;
+        }
+
+        .question {
+            background-color: #e9eef0;
+            font-size: 25px;
+            font-weight: 400;
+            padding: 2em;
+        }
+
+        #question {
+            background-color: #7eb1be;
+            font-size: 30px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #button {
+            background-color: #73b7c9dd;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .footer {
+            height: 55px;
+            background-color: #73b7c9dd;
+            padding: 1em;
+            font-size: 15px;
+            text-align: center;
+            position: static;
+            padding-bottom: 2em;
+        }
+
+        a:link {
+            color: black;
+            text-decoration-line: none;
+        }
+
+        a:visited {
+            color: black;
+            text-decoration-line: none;
+        }
+
+        a:hover {
+            color: #2d2d2e;
+            text-decoration-line: none;
+        }
+
+        a:active {
+            color: black;
+            text-decoration-line: none;
+        }
+
+        #select {
+            font-weight: 800;
+            border: 2px solid black;
+            margin-right: 0.2em;
+        }
+
+        #warning {
+            background-color: #73b7c9ff;
+            font-size: 30px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #73b7c955;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <br>
+        <span><a href="home.html">Home</a></span>
+        <span><a href="about.html">About</a></span>
+        <span><a href="survey.html">Survey</a></span>
+        <span id="select"><a href="quiz.html">Quiz</a></span>
+    </header>
+    <div class="parallax1">
+        <div id="warning">
+            <centre> This quiz is specially designed for students to test if they are dyslexic or not. Students are
+                advised to attempt all the questions patiently under the surveillance of an elder.<br>
+                ALL THE BEST JUNIOR!</centre>
+        </div>
+    </div>
+    <div class="main">
+        <form name="quiz" method="post" action="quiz.php">
+            <div class="question">
+                <span id="question">
+                    Question 1
+                </span><br><br>
+                <div class="content">
+                    Check whether these two alphabets are same or not?<br><br>
+                    <img src="o.png" width=100 height=100><img src="0.jpeg" width=100 height=100><br>
+                    <input type="radio" id="Yes" name="q1" value="4" disabled>
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="q1" value="0" disabled>
+                    <label for="No">No</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 2
+                </span><br><br>
+                <div class="content">
+                    Guess the fruit in the picture below.<br><br>
+                    <img src="grapes.jpeg" width=350 height=250><br>
+                    <input type="radio" id="Grapes" name="q2" value="4" disabled>
+                    <label for="Grapes">Grapes</label><br>
+                    <input type="radio" id="Orange" name="q2" value="0" disabled>
+                    <label for="Orange">Orange</label><br>
+                    <input type="radio" id="Banana" name="q2" value="0" disabled>
+                    <label for="Banana">Banana</label><br>
+                    <input type="radio" id="Mango" name="q2" value="0" disabled>
+                    <label for="Mango">Mango</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 3
+                </span><br><br>
+                <div class="content">
+                    Check whether these two alphabets are same or not?<br><br>
+                    <img src="g.jpg" width=100 height=100><img src="s.jpeg" width=100 height=100><br>
+                    <input type="radio" id="Yes" name="q3" value="0" disabled>
+                    <label for="Yes">Yes</label><br>
+                    <input type="radio" id="No" name="q3" value="4" disabled>
+                    <label for="No">No</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 4
+                </span><br><br>
+                <div class="content">
+                    Which letter is G?<br><br>
+                    <img src="g.jpg" width=100 height=100><img src="o.png" width=100 height=100><br>
+                    <input type="radio" id="First" name="q4" value="4" disabled>
+                    <label for="First">First</label><br>
+                    <input type="radio" id="Second" name="q4" value="0" disabled>
+                    <label for="Second">Second</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 5
+                </span><br><br>
+                <div class="content">
+                    Which letter CAT starts with?<br><br>
+                    <img src="cat.jpeg" width=400 height=300><br>
+                    <input type="radio" id="K" name="q5" value="0" disabled>
+                    <label for="K">K</label><br>
+                    <input type="radio" id="S" name="q5" value="0" disabled>
+                    <label for="S">S</label><br>
+                    <input type="radio" id="C" name="q5" value="4" disabled>
+                    <label for="C">C</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 6
+                </span><br><br>
+                <div class="content">
+                    What is the smaller version of this letter?<br><br>
+                    <img src="b.png" width=100 height=100><br>
+                    <input type="radio" id="d" name="q6" value="0" disabled>
+                    <label for="d">d</label><br>
+                    <input type="radio" id="b" name="q6" value="4" disabled>
+                    <label for="b">b</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 7
+                </span><br><br>
+                <div class="content">
+                    What do you hear?<br><br>
+                    <audio controls>
+                        <source src="s.mp3" type="audio/mp3">
+                    </audio><br><br>
+                    <input type="radio" id="F" name="q7" value="0" disabled>
+                    <label for="F">F</label><br>
+                    <input type="radio" id="S" name="q7" value="4" disabled>
+                    <label for="S">S</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 8
+                </span><br><br>
+                <div class="content">
+                    What do you see in the picture?<br><br>
+                    <img src="god.jpeg" width=300 height=200><br><br>
+                    <input type="radio" id="DOG" name="q8" value="0" disabled>
+                    <label for="DOG">DOG</label><br>
+                    <input type="radio" id="GOD" name="q8" value="4" disabled>
+                    <label for="GOD">GOD</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 9
+                </span><br><br>
+                <div class="content">
+                    Which hand is left and Which hand is right?<br><br>
+                    <img src="right.jpeg" width=300 height=200><img src="left.jpeg" width=300 height=200><br><br>
+                    <input type="radio" id="First one is right and next one is left" name="q9" value="4" disabled>
+                    <label for="First one is right and next one is left">First one is right and next one is
+                        left</label><br>
+                    <input type="radio" id="First one is left and next one is right" name="q9" value="0" disabled>
+                    <label for="First one is left and next one is right">First one is left and next one is
+                        right</label><br>
+                </div>
+                <br>
+
+                <span id="question">
+                    Question 10
+                </span><br><br>
+                <div class="content">
+                    What do you hear?<br><br>
+                    <audio controls>
+                        <source src="lake.mp3" type="audio/mp3">
+                    </audio><br><br>
+                    <input type="radio" id="CAKE" name="q10" value="0" disabled>
+                    <label for="CAKE">CAKE</label><br>
+                    <input type="radio" id="LAKE" name="q10" value="4" disabled>
+                    <label for="LAKE">LAKE</label><br>
+                    <input type="radio" id="TAKE" name="q10" value="0" disabled>
+                    <label for="TAKE">TAKE</label><br>
+                    <input type="radio" id="FAKE" name="q10" value="0" disabled>
+                    <label for="FAKE">FAKE</label><br>
+                </div>
+                <!--<br>
+            
+            <span id="button"><a href="result.html"><centre>SUBMIT THE QUIZ!</centre></a></span>-->
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        2021 WEBpredictor<br>
+        All rights reserved<br>
+        Issued in public interest<br>
+        WEBpredictor does not provide any medical advice, diagnosis or treatment.<br>
+    </div>
+
+</body>
+
+</html>
